@@ -112,3 +112,21 @@ CREATE TABLE customer(
 INSERT INTO customer VALUES
 ('1001','5001','7001','Rana','Bojongsoang',081345670245),
 ('1002','5001','7002','Rani','Baraya',081345670289)
+
+CREATE TABLE Kurir(
+	ID_Kurir varchar(7),
+	ID_Cus varchar(7),
+	ID_Adm varchar(7),
+	Nama_Kurir varchar(50),
+	No_Tlp int(12),
+	PRIMARY KEY(ID_Kurir),
+	FOREIGN KEY(ID_Adm) REFERENCES Admin(ID_Adm) ON UPDATE CASCADE ON DELETE CASCADE,
+	FOREIGN KEY(ID_Cus) REFERENCES Customer(ID_Cus) ON UPDATE CASCADE ON DELETE CASCADE
+
+);
+
+INSERT INTO Kurir VALUES
+('6001','1001','5001','Alpha',081345670258),
+('6002','1002','5001','Beta',081345670267)
+
+select *from kios;

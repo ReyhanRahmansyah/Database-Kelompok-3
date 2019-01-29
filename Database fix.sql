@@ -26,11 +26,14 @@ CREATE TABLE Laporan(
 	FOREIGN KEY(ID_Adm) REFERENCES Admin(ID_Adm) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
+<<<<<<< HEAD
 INSERT INTO Laporan VALUES
 ('4001','5001',2019-01-01,500000,300000),
 ('4002','5001',2019-01-03,600000,500000)
 
 
+=======
+>>>>>>> 495142334a842cfed4e636d6ca65f2473bc8f4ee
 --
 -- Tabel 'Kios'
 
@@ -67,4 +70,45 @@ CREATE TABLE Makanan(
 INSERT INTO Makanan VALUES
 ('3001','Ayam Goreng','10000'),
 ('3002','Sapi Goreng','15000')
+<<<<<<< HEAD
 
+=======
+>>>>>>> 495142334a842cfed4e636d6ca65f2473bc8f4ee
+
+
+CREATE TABLE Pengorderan(
+	ID_Order varchar(7),
+	No_Kios varchar(7),
+	ID_Makanan varchar(7),
+	ID_Adm varchar(7),
+	Tgl_Order date,
+	PRIMARY KEY(ID_Order),
+	FOREIGN KEY(No_Kios) REFERENCES Kios(No_Kios) ON UPDATE CASCADE ON DELETE CASCADE,
+	FOREIGN KEY(ID_Makanan) REFERENCES Makanan(ID_Makanan) ON UPDATE CASCADE ON DELETE CASCADE,
+	FOREIGN KEY(ID_Adm) REFERENCES Admin(ID_Adm) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+INSERT INTO Pengorderan VALUES
+('7001','2001','3001','5001',2019-01-01),
+('7002','2002','3002','5002',2019-01-01)
+
+--
+-- Tabel 'Customer'
+--
+
+CREATE TABLE customer(
+	ID_Cus varchar(7),
+	ID_Adm varchar(7),
+    ID_Order varchar(7),
+	Nama_Cus varchar(50),
+	Alamat varchar(50),
+	No_Tlp int(12),
+	PRIMARY KEY(ID_Cus),
+	FOREIGN KEY(ID_Adm) REFERENCES Admin(ID_Adm) ON UPDATE CASCADE ON DELETE CASCADE,
+	FOREIGN KEY(ID_Order) REFERENCES Pengorderan(ID_Order) ON UPDATE CASCADE ON DELETE CASCADE
+
+);
+
+INSERT INTO customer VALUES
+('1001','5001','7001','Rana','Bojongsoang',081345670245),
+('1002','5001','7002','Rani','Baraya',081345670289)

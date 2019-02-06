@@ -1,0 +1,74 @@
+html,body {
+	height:100%;
+	width:100%;
+	margin:0;
+	background-color:#8FBC8F;
+}
+body , body {
+	display:flex;
+}
+form {
+	margin:auto;
+	background-color: white;
+	width: 250px;
+	padding: 25px;
+	font-family: "arial";
+	font-size: 16px;
+	border-radius: 5px;
+	text-align: center;
+	
+}
+
+.input_text_area{
+	border: none;
+	border-bottom: 3px solid #ddd;
+	width: 250px;
+	padding-top: 20px;
+	padding-bottom: 9px;
+	margin-bottom: 9px;
+
+}
+
+.input_text_area:focus{
+	border-bottom: 3px solid #badc58;
+	outline: none;
+
+}
+
+.btn_sbmt{
+	margin-top: 9px;
+	background-color: #badc58;
+	text-align: center;
+	border-color: #badc58;
+	border-radius: 5px;
+	border-style: none;
+
+	text-decoration: none;
+	cursor: pointer;
+	height: 35px;
+	color: white;
+	padding: 10px
+}
+
+.btn_sbmt:hover{
+	background-color: #A5C24E
+}
+
+.btn_regis{
+	margin-top: 9px;
+	background-color: #badc58;
+	text-align: center;
+	border-color: #badc58;
+	border-radius: 5px;
+	border-style: none;
+
+	text-decoration: none;
+	cursor: pointer;
+	height: 35px;
+	color: white;
+	padding: 10px
+}
+
+.btn_regis:hover{
+	background-color: #A5C24E
+}
